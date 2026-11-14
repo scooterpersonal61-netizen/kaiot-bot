@@ -6,4 +6,5 @@ RUN chown -R 1000:1000 /home/node/.openclaw
 
 USER 1000:1000
 EXPOSE 18789
-CMD ["openclaw", "gateway", "run"]
+ENTRYPOINT ["node", "/app/openclaw.mjs"]
+CMD ["gateway", "run", "--allow-unconfigured", "--bind", "lan", "--port", "18789"]
