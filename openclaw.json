@@ -1,0 +1,49 @@
+{
+  "gateway": {
+    "mode": "local",
+    "port": 18789,
+    "bind": "lan",
+    "auth": { "mode": "token", "token": "e5270cfd38a6b149" }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "9118779117:AAE0ZHgpAvzMWxYy7KC18vcXxZR_rKWJxk4",
+      "groupAllowFrom": ["1474110810"],
+      "groups": { "*": { "requireMention": true } }
+    }
+  },
+  "models": {
+    "providers": {
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com",
+        "api": "openai-completions"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "deepseek:manual": {
+        "provider": "deepseek",
+        "mode": "api_key",
+        "apiKey": "sk-52ece40f38db4a5c841e6a2f6461c00e"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "deepseek/deepseek-chat",
+      "workspace": "/home/node/.openclaw/workspace"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "deepseek": { "enabled": true },
+      "telegram": { "enabled": true }
+    }
+  },
+  "commands": {
+    "ownerAllowFrom": ["telegram:1474110810"]
+  }
+}
