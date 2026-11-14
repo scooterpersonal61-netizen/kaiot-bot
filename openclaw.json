@@ -9,7 +9,7 @@
     "telegram": {
       "enabled": true,
       "dmPolicy": "pairing",
-      "botToken": "9118779117:AAE0ZHgpAvzMWxYy7KC18vcXxZR_rKWJxk4",
+      "botToken": "9118779117:AAE0ZHgpAvzMWxYy7KCl8vcXxzR_rkWJxk4",
       "groupAllowFrom": ["1474110810"],
       "groups": { "*": { "requireMention": true } }
     }
@@ -18,16 +18,14 @@
     "providers": {
       "deepseek": {
         "baseUrl": "https://api.deepseek.com",
-        "api": "openai-completions"
-      }
-    }
-  },
-  "auth": {
-    "profiles": {
-      "deepseek:manual": {
-        "provider": "deepseek",
-        "mode": "api_key",
-        "apiKey": "sk-52ece40f38db4a5c841e6a2f6461c00e"
+        "api": "openai-completions",
+        "apiKey": "sk-52ece40f38db4a5c841e6a2f6461c00e",
+        "models": [
+          {
+            "id": "deepseek-chat",
+            "name": "DeepSeek Chat"
+          }
+        ]
       }
     }
   },
